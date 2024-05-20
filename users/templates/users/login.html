@@ -1,0 +1,28 @@
+{% extends "project/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <div class="container" style="width: 50%">
+            <h1 class="title-lg text-center">Введите данные</h1>
+            <div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <h3>Вход</h3>
+                    <hr>
+                    {{ form|crispy }}
+                    <div class="form-group">
+                        <button class="button button-main" type="submit">Войти</button>
+                    </div>
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        Новый клиент? <a class="text-decoration-none" href="{% url 'users:user_register' %}">Создать аккаунт</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,7 @@
+pip
+django
+pillow
+plotly
+django_crispy_forms
+crispy-bootstrap4
+kaleido

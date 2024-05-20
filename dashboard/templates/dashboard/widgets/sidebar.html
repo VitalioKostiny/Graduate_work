@@ -1,0 +1,23 @@
+<div class="col-md-3 border-start">
+    <h3 class="text-muted">Меню</h3>
+
+    <a class="text-decoration-none" href="{% url 'dashboard:users' %}">
+        <li class="rounded list-group-item mt-2 text-primary">Пользователи</li>
+    </a>
+    <a class="text-decoration-none" href="{% url 'dashboard:measurements' %}">
+        <li class="rounded list-group-item mt-2 text-primary">Измерения</li>
+    </a>
+    <a class="text-decoration-none" href="{% url 'dashboard:feedbacks' %}">
+        <li class="rounded list-group-item mt-2 text-primary">Отзывы</li>
+    </a>
+    <a class="text-decoration-none" href="{% url 'dashboard:add_measurement' %}">
+        <li class="rounded list-group-item mt-2 text-primary">Добавить измерение</li>
+    </a>
+    <a class="text-decoration-none" href="{% url 'measurement:home' %}">
+        <li class="rounded list-group-item bg-primary mt-2 text-white">Назад</li>
+    </a>
+    <a class="text-decoration-none" href="{% url 'users:user_logout' %}">
+        <li class="rounded list-group-item bg-danger mt-2 text-white">Выход</li>
+    </a>
+    <div class="text-muted mt-2">@{{ request.user.email }}</div>
+</div>

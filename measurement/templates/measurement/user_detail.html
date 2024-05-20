@@ -1,0 +1,10 @@
+{% extends "project/base.html" %}
+
+{% block content %}
+    <div class="container mt-1">
+        {% include 'measurement/widgets/chart.html' with graph=graph %}
+    </div>
+    <div class="mt-1">
+        {% include 'measurement/widgets/feedbacks.html' with comments=comments current_user=current_user %}
+    </div>
+{% endblock %}

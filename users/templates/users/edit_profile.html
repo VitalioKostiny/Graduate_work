@@ -1,0 +1,25 @@
+{% extends "project/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+        <div class="container" style="width: 50%">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h1 class="text-center title-lg">Профиль</h1>
+                <hr>
+                <div class="mb">
+                    {% if user.image %}
+                        <img src="{{user.image.url}}" width="70" class="rounded-circle mt-2">
+                    {% else %}
+                       <img src="https://i.imgur.com/xELPaag.jpg" width="70" class="rounded-circle mt-2">
+                    {% endif %}
+                </div>
+                {{ form|crispy  }}
+                <div class="form-group">
+                    <button class="button button-main mt-3 w-100" type="submit">Обновить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

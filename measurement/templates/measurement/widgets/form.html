@@ -1,0 +1,10 @@
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <h3 class="text-center title-lg">Введите данные</h3>
+        {{ form }}
+        <div class="form-group">
+            <button class="button button-main mt-3" type="submit">Добавить</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+.mt-sm {
+    margin-top: 0.6rem;
+}
+
+.mt, .mt-md{
+    margin-top: 1rem;
+}
+
+.mt-lg {
+    margin-top: 1.75rem;
+}
+
+.mb-sm {
+    margin-bottom: 0.6rem;
+}
+
+.mb, .mt-md{
+    margin-bottom: 1rem;
+}
+
+.mb-lg {
+    margin-bottom: 1.75rem;
+}
+
+.mr-sm {
+    margin-right: .6em;
+}
+
+.mr, .mt-md{
+    margin-right: 1em;
+}
+
+.mr-lg {
+    margin-right: 1.75em;
+}
+
+.ml-sm {
+    margin-left: .6em;
+}
+
+.ml, .mt-md{
+    margin-left: 1em;
+}
+
+.ml-lg {
+    margin-left: 1.75em;
+}
+
+.pl-lg {
+    padding: 7.5px 10px; 
+}

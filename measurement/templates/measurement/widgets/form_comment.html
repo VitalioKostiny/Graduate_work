@@ -1,0 +1,19 @@
+{% if request.user.is_authenticated %}
+	<div class="container mt-1">
+		<form action="{% url 'measurement:add_feedback' receiver_user_id %}" method="POST">
+			{% csrf_token %}
+			<h1 class="text-center mt-3 title-lg">Отзывы</h1>
+			<div class="mt ml mr">
+				<p>
+					<label>Ваш комментарий</label>
+				</p>
+				<p>
+					<textarea class="form-text-area" name="comment" rows=5></textarea>
+				</p>
+				<p>
+					<input type="submit" value="Добавить" class="button button-main">
+				</p>
+			</div>
+		</form>
+	</div>
+{% endif %}

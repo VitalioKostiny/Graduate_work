@@ -1,0 +1,27 @@
+{% extends "project/base.html" %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h1 class="text-center title-lg">Пользователи</h1>
+    <table class="table">
+        <thead class="text-muted">
+            <tr>
+                <th scope="col">n</th>
+                <th scope="col">Имя</th>
+            </tr>
+        </thead>
+        {% for user in users %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>
+                <a class="text-decoration-none" href="{% url 'measurement:user_detail' user.id %}">{{ user.full_name }}</a>
+            </td>
+          </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
+

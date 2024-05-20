@@ -1,0 +1,34 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<table class="table table-striped ">
+    <thead class="text-muted">
+        <tr>
+            <th scope="col">n</th>
+            <th scope="col">Пользователь</th>
+            <th scope="col">Вес</th>
+            <th scope="col">Обхват бедра</th>
+            <th scope="col">Обхват бицепса</th>
+            <th scope="col">Дата</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    {% for note in data %}
+    <tbody>
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td><a class="text-decoration-none" href="{% url 'dashboard:edit_measurement' note.id %}">{{ note.user.full_name }}</a></td>
+        <td>{{ note.weight }} кг</td>
+        <td>{{ note.hip_girth }} см</td>
+        <td>{{ note.biceps_girth }} см</td>
+        <td>{{ note.date_create|date:"M d" }}</td>
+        <td><a class="text-danger text-decoration-none" href="{% url 'dashboard:delete_measurement' note.id %}">Удалить</a></td>
+        <td><a class="text-info text-decoration-none" href="{% url 'dashboard:edit_measurement' note.id %}">Изменить</a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+{% endblock %}

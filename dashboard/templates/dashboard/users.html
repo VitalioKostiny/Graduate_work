@@ -1,0 +1,30 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block content %}
+
+<table class="table table-striped ">
+    <thead class="text-muted">
+        <tr>
+            <th scope="col">n</th>
+            <th scope="col">Ник</th>
+            <th scope="col">Почта</th>
+            <th scope="col">Админ</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    {% for note in data %}
+    <tbody>
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td><a class="text-decoration-none" href="{% url 'dashboard:edit_user' note.id %}">{{ note.full_name }}</a></td>
+        <td>{{ note.email }}</td>
+        <td>{{ note.is_admin }}</td>
+        <td><a class="text-danger text-decoration-none" href="{% url 'dashboard:delete_user' note.id %}">Удалить</a></td>
+        <td><a class="text-info text-decoration-none" href="{% url 'dashboard:edit_user' note.id %}">Изменить</a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+{% endblock %}
