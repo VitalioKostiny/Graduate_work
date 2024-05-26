@@ -101,7 +101,12 @@ def edit_profile(request):
     """Страница редактирования профиля"""
     form = EditProfileForm(request.POST, request.FILES, instance=request.user)
     if form.is_valid():  # проверяем, что данные валидные
-        form.save()  # сохраняем данные
+        data = form.cleaned_data
+        user = User.objects.filter(id=request.user.id).first()
+        user.full_name = data['full_name']
+        user.email = data['email']
+        user.image = data["image"]
+        user.save()
         messages.success(request, 'Данные профиля были успешно обновлены!', 'success')
         return redirect('users:edit_profile')
     else:

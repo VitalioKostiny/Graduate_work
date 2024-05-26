@@ -30,9 +30,23 @@
         <link rel="stylesheet" type="text/css" href="{% static 'vendor/css/table.css' %}">
     {% endblock %}
 </head>
+<style>
+    .card-cont{
+      width: 75%;
+      height: 75%;
+      padding: 0;
+    }
+
+    .card-cont img{
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+    }
+</style>
     <body style="display: grid">
         {% include 'project/top.html' with request=request %}
         {% include 'project/messages.html' with messages=messages %}
+        {% include 'project/banner.html' %}
         {% block content %}
 
         {% endblock %}

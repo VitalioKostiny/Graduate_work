@@ -30,3 +30,9 @@ body {
     color: white;
     text-decoration: none;
 }
+
+.svg-center {
+     text-align: center;
+     display: flex;
+     justify-content: center;
+}

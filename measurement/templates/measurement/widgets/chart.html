@@ -31,23 +31,36 @@
     .hide {
         display: none !important
     }
+    .svg-center {
+         text-align: center;
+         display: flex;
+         justify-content: center;
+    }
 </style>
 <div class="container">
     <section id="page-4" class="page">
         <div class="chart" id="chart_1">
             <h3 class="text-center title-lg">Вес</h3>
-            {% include 'measurement/graphs/graph_weight.svg' %}
+            <div class="svg-center" >
+                {% include 'measurement/graphs/graph_weight.svg' %}
+            </div>
         </div>
 
         <div class="chart hide" id="chart_2">
             <h1 class="text-center title-lg">Обхват бедра</h1>
-            {% include 'measurement/graphs/graph_hip.svg' %}
+            <div class="svg-center" >
+                {% include 'measurement/graphs/graph_hip.svg' %}
+            </div>
         </div>
 
         <div class="chart hide" id="chart_3">
             <h3 class="text-center title-lg">Обхват бицепса</h3>
-            {% include 'measurement/graphs/graph_biceps.svg' %}
+            <div class="svg-center" >
+                {% include 'measurement/graphs/graph_biceps.svg' %}
+            </div>
         </div>
-        <button class="button button-yellow mt-4 ml-5" onclick="show_graphs(this)">Обхват бедра</button>
+        <div class="svg-center" >
+            <button class="button button-yellow mt-4" onclick="show_graphs(this)">Обхват бедра</button>
+        </div>
     </section>
 </div>

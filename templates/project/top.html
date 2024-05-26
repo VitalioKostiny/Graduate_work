@@ -1,4 +1,4 @@
-<div class="container" style="width: 850px">
+<div class="container" style="width: 100%">
     <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'measurement:home' %}">ЗОЖ</a>
@@ -23,14 +23,14 @@
                             <a class="button button-yellow nav-link active ml" style="color: white;" href="{% url 'users:edit_profile' %}">Профиль</a>
                         </li>
                         <li class="nav-item">
-                            <a class="button button-main nav-link active ml" style="color: white;" href="{% url 'users:user_logout' %}">Выход</a>
+                            <a class="button button-main nav-link active ml text-center" style="color: white;" href="{% url 'users:user_logout' %}">Выход</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="button button-yellow nav-link active ml" href="{% url 'users:user_login' %}">Логин</a>
+                            <a class="button button-yellow nav-link active ml text-center" style="color: white;" href="{% url 'users:user_login' %}">Логин</a>
                         </li>
                         <li class="nav-item">
-                            <a class="button-yellow nav-link active ml button" href="{% url 'users:user_register' %}">Регистрация</a>
+                            <a class="button-yellow nav-link active ml button text-center" style="color: white;" href="{% url 'users:user_register' %}">Регистрация</a>
                         </li>
                     {% endif %}
                     </ul>

@@ -36,7 +36,7 @@ class Measurement(models.Model):
 
         fig = go.Figure(data=go.Scatter(
             x=x_data, y=weight,
-            mode='lines',
+            mode='lines+markers',
             name='test',
             opacity=1),
             layout=layout)
@@ -46,7 +46,7 @@ class Measurement(models.Model):
 
         fig = go.Figure(data=go.Scatter(
             x=x_data, y=hips,
-            mode='lines',
+            mode='lines+markers',
             name='test',
             opacity=1),
             layout=layout)
@@ -56,7 +56,7 @@ class Measurement(models.Model):
 
         fig = go.Figure(data=go.Scatter(
             x=x_data, y=biceps,
-            mode='lines',
+            mode='lines+markers',
             name='test',
             opacity=1),
             layout=layout)
